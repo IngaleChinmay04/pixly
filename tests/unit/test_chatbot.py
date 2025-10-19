@@ -17,7 +17,7 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 try:
-    from backend.chatbot import set_api_key, chat_with_gemini
+    from services.chatbot import set_api_key, chat_with_gemini
 except ImportError as e:
     pytest.skip(f"Chatbot module not available: {e}", allow_module_level=True)
 
